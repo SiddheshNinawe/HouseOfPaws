@@ -29,15 +29,16 @@ export default function Home() {
 
             </ul>
 
+            <iframe width={400} height={500} src='https://www.instagram.com/p/Cce6yYZLzkJ/embed' frameBorder={0}></iframe>
             <button className="btn btn-primary btn-lg" id="btn-back " type="button " onclick="window.location.href='login.html' ">Login</button>
 
           </div>
         </nav>
 
       </header>
-       
-      
+
+
     </div >
-  
+
   )
 }

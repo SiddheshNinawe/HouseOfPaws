@@ -11,11 +11,15 @@ datasource db {
 }
 
 model Pets {
-  id        String   @id @default(cuid())
-  name      String
-  type      String
-  pic       String
-  gender    String
-  createdAt DateTime @default(now())
-  updateAt  DateTime @updatedAt
+  id          String   @id @default(cuid())
+  name        String
+  type        String
+  pic         String
+  gender      String
+  age         Int
+  description String
+  isAdopted   Boolean
+  adoptedBy   String?
+  createdAt   DateTime @default(now())
+  updateAt    DateTime @updatedAt
 }
