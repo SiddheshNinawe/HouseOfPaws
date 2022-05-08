@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap&subset=cyrillic");
+
+/*-------------------- Colors --------------------*/
+body {
+  background-color: #d9c7c7;
+}
+
+/*-------------------- Text, Headings, Margins --------------------*/
+
+.uppercase {
+  padding-top: 100px;
+  color: #f8f9fa;
+  font-weight: bold;
+}
+
+.lead {
+  color: #f8f9fa;
+  font-weight: normal;
+}
+
+.fa {
+  padding-right: 20px;
+  color: #a7282e85;
+}
+
+.fas {
+  color: #a7282e85;
+  padding-bottom: 10px;
+}
+
+.fab {
+  color: #a7282e85;
+  padding-bottom: 10px;
+}
+
+.who-text {
+  color: #f8f9fa;
+}
+
+.card-title {
+  color: #a7282e85;
+}
+/*-------------------- NavBar --------------------*/
+
+.nav-link :hover {
+  background-color: rgb(139, 30, 30);
+  color: white;
+  font-weight: 500;
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #5682c0;
+  border-radius: 20px;
+}
+/*-------------------- Containers --------------------*/
+
+.container-main {
+  background: url("../images/general/index_bg_img.jpeg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-container {
+  width: 250px;
+  height: 400px;
+}
+
+.container-animals {
+  background: url("../images/general/animals_bg.jpeg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container-causes {
+  background: url("../images/general/our-causes.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  margin-top: 62px;
+  height: 250px;
+}
+
+.container-help {
+  background: url("../images/general/help_bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  margin-top: 62px;
+  height: 250px;
+}
+
+.container-about {
+  background: url("../images/general/about-us.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  margin-top: 62px;
+  height: 250px;
+}
+
+#home-page {
+  margin-bottom: 15px;
+}
+
+#shelter {
+  background-color: rgba(243, 243, 243, 0.8);
+}
+
+/*-------------------- Jumbotrons --------------------*/
+.jumbotron {
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/*-------------------- Buttons --------------------*/
+
+/*-------------------- Cards --------------------*/
+.card-buddah-container {
+  position: relative;
+  overflow: hidden;
+  padding-right: 40px;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.card-buddah {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(243, 243, 243, 0.8);
+  border-radius: 20px;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+
+.card-what {
+  border-radius: 5px;
+  background-color: rgba(247, 243, 243, 0.822);
+}
+
+.card-description {
+  width: 250px;
+  height: 300px;
+}
+
+/*-------------------- Block Dividers --------------------*/
+
+.block-divider {
+  width: 275px;
+  height: 2px;
+  border: 0;
+  background-color: #444;
+}
+
+.block-divider--light {
+  background-color: #e9ecef;
+}
+
+/*-------------------- Footer --------------------*/
+
+footer {
+  border-color: transparent;
+  text-align: center;
+  background-color: rgba(243, 243, 243, 0.8);
+}
