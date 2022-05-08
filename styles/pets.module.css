@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  padding: 1em 1em 1em 1em;
+  margin: 2em 1em 1em 1em;
+  background-color: whitesmoke;
+  width: 47%;
+  border-radius: 0.3em;
+  max-width: 48%;
+  max-height: 550px;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1em 1em 1em;
+}
+
+.cardDetails h1 {
+  font-size: 2.5em;
+}
+
+.adopt {
+  width: 10em;
+  height: 2.5em;
+  border: 0;
+  font-weight: bold;
+  color: white;
+  background-color: blueviolet;
+  margin-top: auto;
+  border-radius: 0.3em;
+}
+
+.adopt:hover {
+  background-color: #0095f6;
+}

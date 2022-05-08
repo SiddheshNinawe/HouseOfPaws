@@ -1,11 +1,11 @@
-import styles from '../styles/Home.module.css'
+
 
 export default function Home() {
   return (
     <div>
       <header>
-        <nav className={styles.navbar}>
-          <a className={styles.navbarBrand} href=".html">
+        <nav >
+          <a href=".html">
             <img src="assets/images/general/logo.png" width="60" />
           </a>
           <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,9 +27,10 @@ export default function Home() {
                 <a className="nav-link" href="About-Us.html">About Us</a>
               </li>
 
+              <li>
+                <a href='/api/auth/login'>Login </a>
+              </li>
             </ul>
-
-            <iframe width={400} height={500} src='https://www.instagram.com/p/Cce6yYZLzkJ/embed' frameBorder={0}></iframe>
             <button className="btn btn-primary btn-lg" id="btn-back " type="button " onclick="window.location.href='login.html' ">Login</button>
 
           </div>
