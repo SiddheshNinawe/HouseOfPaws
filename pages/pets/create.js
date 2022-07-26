@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 import { useRouter } from "next/router"
+import styles from "../../styles/create.module.css";
 
 export default function CreatePet() {
 
@@ -35,16 +36,42 @@ export default function CreatePet() {
     }
 
     return (
-        <div>
+        <div className={styles.body}>
             <form onSubmit={handleSubmit}>
-                <input placeholder="Enter pet name" type="text" onChange={(e) => setName(e.target.value)} />
-                <input placeholder="Enter pet type" type="text" onChange={(e) => setType(e.target.value)} />
-                <input placeholder="Enter pet Picture Url" type="url" onChange={(e) => setPicUrl(e.target.value)} />
-                <input placeholder="Enter pet breed" type="text" onChange={(e) => setBreed(e.target.value)} />
-                <input placeholder="Enter pet age" type="number" onChange={(e) => setAge(e.target.value)} />
-                <input placeholder="Enter pet gender" type="text" onChange={(e) => setGender(e.target.value)} />
-                <input placeholder="Enter pet description" type="text" onChange={(e) => setDescription(e.target.value)} />
-                <input type="submit" value="Create" />
+                <h2>Add Animal info</h2>
+                <div>
+                    <label>Enter pet Name:</label>
+                    <input placeholder="Enter pet name" type="text" onChange={(e) => setName(e.target.value)} required/>
+                </div>
+                <div>
+                    <label>Enter pet type:</label>
+                    <input placeholder="Enter pet type" type="text" onChange={(e) => setType(e.target.value)} required/>
+                </div>
+                <div>
+                    <label>Enter pet url:</label>
+                    <input placeholder="Enter pet Picture Url" type="url" onChange={(e) => setPicUrl(e.target.value)} required />
+                </div>
+                <div>
+                    <label>Enter pet Breed:</label>
+                    <input placeholder="Enter pet breed" type="text" onChange={(e) => setBreed(e.target.value)} required/>
+                </div>
+                <div>
+                    <label>Enter pet Age:</label>
+                    <input placeholder="Enter pet age" type="number" onChange={(e) => setAge(e.target.value)} required/>
+                </div>
+                <div>
+                    <label>Enter pet Gender:</label>
+                    <input placeholder="Enter pet gender" type="text" onChange={(e) => setGender(e.target.value)} required/>
+                </div>
+                <div>
+                    <label>Enter pet Description:</label>
+                    <input placeholder="Enter pet description" type="text" onChange={(e) => setDescription(e.target.value)} required/>
+                </div>
+                <div className={styles.buttons}>
+                    <button className={styles.adopt}>
+                        <a >Add</a>
+                    </button>
+                </div>
             </form>
         </div>
     )

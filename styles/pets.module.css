@@ -8,13 +8,18 @@
 
 .card {
   display: flex;
-  padding: 1em 1em 1em 1em;
+  padding: 2em 2em 2em 2em;
   margin: 2em 1em 1em 1em;
-  background-color: whitesmoke;
-  width: 47%;
-  border-radius: 0.3em;
+  background-color: rgba(247, 243, 243, 0.822);
+  width: 40%;
+  border-radius: 0.5em;
   max-width: 48%;
   max-height: 550px;
+}
+
+.card div{
+  padding: 2px;
+  margin-left: 5px;
 }
 
 .cardDetails {
@@ -27,6 +32,27 @@
   font-size: 2.5em;
 }
 
+.buttons {
+  margin-top: auto;
+}
+
+.readMore {
+  width: 10em;
+  height: 2.5em;
+  border: 0;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border-radius: 0.3em;
+  cursor: pointer;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+  background-color:#0095f6;
+  color: white;
+}
+
 .adopt {
   width: 10em;
   height: 2.5em;
@@ -34,10 +60,104 @@
   font-weight: bold;
   color: white;
   background-color: blueviolet;
-  margin-top: auto;
   border-radius: 0.3em;
+  cursor: pointer;
 }
 
 .adopt:hover {
   background-color: #0095f6;
+}
+
+.adoptPageRedirectLink {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+}
+
+.navbar {
+  width: 100vw;
+  height: 12vh;
+  background-color: rgb(143, 134, 120);
+  position: fixed;
+  top: 0;
+  opacity: 1em;
+}
+
+.navbar ul li {
+  display: inline-block;
+  list-style-type: none;
+  padding-left: 5%;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  line-height: 50px;
+  padding: 10px 28px;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  background-color: rgb(98, 79, 47);
+  color: white;
+  transition: 0.4s;
+}
+
+.navbar img {
+  float: left;
+  width: 4vw;
+  height: 12vh;
+  padding-bottom: 30px;
+  margin-left: 30px;
+}
+
+.bgimage {
+  background: url("/animals_bg.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 50vh;
+  margin-top: 12vh;
+}
+
+.bgimage h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 18vh;
+  color: white;
+}
+
+.bgimage h2 {
+  text-align: center;
+  color: white;
+}
+
+.body {
+  background-color: #d9c7c7;
+}
+.footer{
+ padding-bottom: 22px;
+ background-color: rgba(247, 243, 243, 0.822);
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.footer h2{
+  text-align: center;
+  width: 97vw;
+  padding-left: 2.5%;
+  color: #935858;
+}
+.footer span{
+  color: #935858;
+  font-size: 30px;
 }

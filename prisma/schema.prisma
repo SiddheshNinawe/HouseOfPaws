@@ -20,7 +20,21 @@ model Pets {
   age         Int
   description String
   isAdopted   Boolean
-  adoptedBy   String?
   createdAt   DateTime @default(now())
   updateAt    DateTime @updatedAt
+  adoptedBy   Adopter?
+}
+
+model Adopter {
+  id         String   @id @default(cuid())
+  name       String
+  email      String
+  contact    String
+  address    String
+  occupation String
+  aadhar     String
+  createdAt  DateTime @default(now())
+  updateAt   DateTime @updatedAt
+  Pets       Pets     @relation(fields: [petId], references: [id])
+  petId      String   @unique
 }
