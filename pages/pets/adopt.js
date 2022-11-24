@@ -13,6 +13,7 @@ const AdoptPage = () => {
   const [address, setAddress] = useState("");
   const [occupation, setOccupation] = useState("");
   const [aadhar, setAadhar] = useState("");
+  const router = useRouter();
 
   const handleAdopt = async (e) => {
     e.preventDefault();
@@ -111,17 +112,19 @@ const AdoptPage = () => {
                 correct.
               </label>
             </div>
-              <div className={styles.buttons}>
-                <button  className={styles.adopt}>
-                <a>Adopt</a>
-                </button>
-              </div>
+            <div className={styles.buttons}>
+              <button className={styles.adopt}>
+                <linK>
+                  <a>Adopt</a>
+                </linK>
+              </button>
+            </div>
           </form>
         </div>
       </>
     );
   } else {
-    const router = useRouter();
+
     router.push("/api/auth/login");
     return <p>Redirecting...</p>;
   }
