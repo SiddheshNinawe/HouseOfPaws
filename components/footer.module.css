@@ -1,0 +1,18 @@
+.footer{
+ /* padding-bottom: 25px; */
+ background-color: rgba(247, 243, 243, 0.822);
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+}
+
+.footer h2{
+  text-align: center;
+  width: 97vw;
+  padding-left: 2.5%;
+  color: #935858;
+}
+.footer span{
+  color: #935858;
+  font-size: 30px;
+}

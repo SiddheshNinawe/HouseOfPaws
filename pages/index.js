@@ -2,59 +2,15 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Link from "next/link";
 import styles from "../styles/home.module.css";
+import NavBar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
 
   return (
     <div className={styles.body}>
-      <div className={styles.navbar}>
-        <nav>
-          <div className="logo">
-            <img src="/logo.png" />
-          </div>
-          <ul>
-            <li>
-              <Link href="/">
-                <a className="nav-link">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="../pets">
-                <a className="nav-link">
-                  Our Animals
-                </a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about">
-                <a className="nav-link">
-                  About Us
-                </a>
-              </Link>
-            </li>
-            <li>
-              {user && (
-                <Link href="/api/auth/logout">
-                  <a className="nav-link">
-                    Logout
-                  </a>
-                </Link>
-              )}
-              {!user && (
-                <Link href="/api/auth/login">
-                  <a className="nav-link">
-                    Login
-                  </a>
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
-      </div>
-
+      <NavBar/>
       <div className={styles.bgimage}>
         <h1>House of Paws</h1>
         <h2>Animal Wellness and welfare</h2>
@@ -111,26 +67,7 @@ export default function Home() {
           <img src="/about-us-4.jpg" />
         </div>
       </div>
-
-      <div className={styles.footer}>
-        <h2>Contact Details</h2>
-        <div>
-          <h4>
-            <span> &#9906; </span>
-            S.B.Jain, Nagpur, Maharashtra
-          </h4>
-        </div>
-        <div>
-          <h4>
-            <span> &#9743; </span> 7771976134
-          </h4>
-        </div>
-        <div>
-          <h4>
-            <span>&#9993; </span> houseofpaws@gmail.com
-          </h4>
-        </div>
-      </div>
+      <Footer/>    
     </div>
   );
 }
