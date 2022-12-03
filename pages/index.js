@@ -2,7 +2,8 @@
 import { useUser } from "@auth0/nextjs-auth0";
 import Link from "next/link";
 import styles from "../styles/home.module.css";
-import NavBar from '../components/NavBar';
+import NavBar from '../components/navbar';
+import Footer from '../components/footer';
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
@@ -66,26 +67,7 @@ export default function Home() {
           <img src="/about-us-4.jpg" />
         </div>
       </div>
-
-      <div className={styles.footer}>
-        <h2>Contact Details</h2>
-        <div>
-          <h4>
-            <span> &#9906; </span>
-            S.B.Jain, Nagpur, Maharashtra
-          </h4>
-        </div>
-        <div>
-          <h4>
-            <span> &#9743; </span> 7771976134
-          </h4>
-        </div>
-        <div>
-          <h4>
-            <span>&#9993; </span> houseofpaws@gmail.com
-          </h4>
-        </div>
-      </div>
+      <Footer/>    
     </div>
   );
 }

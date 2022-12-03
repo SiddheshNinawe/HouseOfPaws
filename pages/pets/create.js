@@ -3,6 +3,7 @@ import axios from "axios"
 import { useRouter } from "next/router"
 import styles from "../../styles/create.module.css"
 import NavBar from '../../components/navbar';
+import Footer from "../../components/footer";
 
 export default function CreatePet() {
 
@@ -75,6 +76,7 @@ export default function CreatePet() {
                     </button>
                 </div>
             </form>
+            <Footer/>
         </div>
     )
 }

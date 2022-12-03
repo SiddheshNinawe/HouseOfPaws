@@ -4,6 +4,7 @@ import styles from "../../styles/adopt.module.css";
 import { useState } from "react";
 import axios from "axios";
 import NavBar from "../../components/navbar";
+import Footer from "../../components/footer";
 
 const AdoptPage = () => {
   const { user, error, isLoading } = useUser();
@@ -122,6 +123,7 @@ const AdoptPage = () => {
             </div>
           </form>
         </div>
+        <Footer/>
       </>
     );
   } else {
