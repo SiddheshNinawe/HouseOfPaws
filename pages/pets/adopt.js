@@ -116,9 +116,7 @@ const AdoptPage = () => {
             </div>
             <div className={styles.buttons}>
               <button className={styles.adopt}>
-                <linK>
-                  <a>Adopt</a>
-                </linK>
+                  Adopt
               </button>
             </div>
           </form>
