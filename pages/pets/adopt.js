@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import styles from "../../styles/adopt.module.css";
 import { useState } from "react";
 import axios from "axios";
+import NavBar from "../../components/navbar";
 
 const AdoptPage = () => {
   const { user, error, isLoading } = useUser();
@@ -36,6 +37,7 @@ const AdoptPage = () => {
   if (user) {
     return (
       <>
+        <NavBar />
         <div className={styles.body}>
           <form onSubmit={handleAdopt}>
             <h2>Adoption Form</h2>
@@ -105,7 +107,6 @@ const AdoptPage = () => {
               </div>
             </div>
             <div>
-
               <input type="checkbox" value="check" required />
               <label>
                 I hearby declare that the information provided is true and

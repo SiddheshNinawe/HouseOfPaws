@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import styles from "../../styles/id.module.css";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
+import NavBar from '../../components/navbar';
 
 export async function getStaticPaths() {
   const prisma = new PrismaClient();
@@ -32,6 +33,7 @@ const PetPage = ({ pet }) => {
 
   return (
     <div className={styles.body}>
+      <NavBar/>
       <section>
         <h1>Animal Info</h1>
         

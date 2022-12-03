@@ -1,7 +1,8 @@
 import { useState } from "react"
 import axios from "axios"
 import { useRouter } from "next/router"
-import styles from "../../styles/create.module.css";
+import styles from "../../styles/create.module.css"
+import NavBar from '../../components/navbar';
 
 export default function CreatePet() {
 
@@ -37,6 +38,7 @@ export default function CreatePet() {
 
     return (
         <div className={styles.body}>
+            <NavBar/>
             <form onSubmit={handleSubmit}>
                 <h2>Add Animal info</h2>
                 <div>

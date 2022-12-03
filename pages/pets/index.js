@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import Link from "next/link";
 import styles from "../../styles/pets.module.css";
 import { useUser } from "@auth0/nextjs-auth0";
+import NavBar from '../../components/navbar'
 
 export async function getStaticProps() {
     const prisma = new PrismaClient();
