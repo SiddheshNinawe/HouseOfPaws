@@ -19,6 +19,7 @@ const createPetRoute = async (req, res) => {
                     aadhar: aadhar,
                 },
             });
+            await prisma.pets.update({ where: { id: id }, data: { isAdopted: true } })
             res.status(200).end();
         } catch (error) {
             console.log(error);

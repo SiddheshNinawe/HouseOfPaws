@@ -21,6 +21,13 @@ export async function getStaticProps({ params }) {
     where: {
       id: params.id,
     },
+    include: {
+      adoptedBy: {
+        select: {
+          name: true
+        }
+      }
+    }
   });
   return {
     props: {
@@ -34,7 +41,7 @@ const PetPage = ({ pet }) => {
 
   return (
     <div className={styles.body}>
-      <NavBar/>
+      <NavBar />
       <section>
         <h1>Animal Info</h1>
 
@@ -44,7 +51,9 @@ const PetPage = ({ pet }) => {
           width={320}
           height={490}
         />
-
+        <br />
+        {pet.isAdopted && <div><b>Adopted By : {pet.adoptedBy.name}</b></div>}
+        <br />
         <div><b>Name : </b>{pet.name}</div>
         <div><b>Id : </b>{pet.id}</div>
         <div><b>Type : </b>{pet.type}</div>
@@ -62,9 +71,9 @@ const PetPage = ({ pet }) => {
             </div>
           </Link>
         )}
-        {pet.isAdopted && <div>Adopted By : {pet.adoptedBy}</div>}
+
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

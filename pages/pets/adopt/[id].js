@@ -24,19 +24,18 @@ export const getServerSideProps = withPageAuthRequired({
 const AdoptPage = ({ pet }) => {
     const { user, error, isLoading } = useUser();
     const [name, setName] = useState("");
-    const [id, setId] = useState("");
     const [email, setEmail] = useState("");
     const [contact, setContact] = useState("");
     const [address, setAddress] = useState("");
     const [occupation, setOccupation] = useState("");
     const [aadhar, setAadhar] = useState("");
-
+    const [adopted, setAdopted] = useState(pet.isAdopted)
     const router = useRouter()
 
     const handleAdopt = async (e) => {
         e.preventDefault();
         const data = {
-            id,
+            id: pet.id,
             name,
             email,
             contact,
@@ -47,7 +46,7 @@ const AdoptPage = ({ pet }) => {
         try {
             const res = await axios.post("/api/pets/adopt", data);
             if (res.status == 200) {
-                router.push('/')
+                router.push(`/pets/${pet.id}`)
             }
         } catch (error) {
             console.log(error);
@@ -59,7 +58,8 @@ const AdoptPage = ({ pet }) => {
         <>
             <div className={styles.body}>
                 <form onSubmit={handleAdopt}>
-                    <h2>Adoption Form</h2>
+                    <h2>Adoption Form for {pet.name}</h2>
+
                     <div>
                         {/* <div>
                             <label>Pet Id: </label>
@@ -136,16 +136,13 @@ const AdoptPage = ({ pet }) => {
                     </div>
                     <div className={styles.buttons}>
                         <button className={styles.adopt}>
-
-                            <a>Adopt</a>
-
+                            Adopt
                         </button>
                     </div>
                 </form>
             </div>
         </>
     );
-
 };
 
 export default AdoptPage;

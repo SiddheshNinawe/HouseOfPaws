@@ -20,7 +20,7 @@ export default function About() {
 
       <div className={styles.aboutcard}>
         <div>
-          <img src="/siddhesh.jpeg" />
+          <img src="/siddhesh.jpg" />
           <h3>Siddhesh Ninawe</h3>
           <p>B.E. CSE 3rd year</p>
           <p>S.B. Jain institute of Technology Management and Research</p>
