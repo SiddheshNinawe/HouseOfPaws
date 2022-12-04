@@ -1,6 +1,7 @@
 .body {
   background-color: #d9c7c7;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -10,7 +11,7 @@
   width: 40%;
   border-radius: 0.5em;
   padding: 20px 20px 20px 135px;
-  margin: 50px;
+  margin: 10%;
 }
 
 .body section iframe{
