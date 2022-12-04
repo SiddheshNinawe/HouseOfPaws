@@ -35,6 +35,6 @@ model Adopter {
   aadhar     String
   createdAt  DateTime @default(now())
   updateAt   DateTime @updatedAt
-  Pets       Pets     @relation(fields: [petId], references: [id])
+  Pets       Pets     @relation(fields: [petId], references: [id], onDelete: Cascade)
   petId      String   @unique
 }

@@ -20,11 +20,11 @@ export default function About() {
               </Link>
             </li>
             <li>
-              <link href="../pets" >
+              <Link href="../pets" >
                 <a className="nav-link">
                   Our Animals
                 </a>
-              </link>
+              </Link>
             </li>
             <li>
               <Link href="/about" >

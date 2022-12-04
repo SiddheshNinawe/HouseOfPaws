@@ -34,14 +34,14 @@ const PetPage = ({ pet }) => {
     <div className={styles.body}>
       <section>
         <h1>Animal Info</h1>
-        
-          <iframe
-            src={`${pet.pic}embed`}
-            frameBorder={0}
-            width={320}
-            height={490}
+
+        <iframe
+          src={`${pet.pic}embed`}
+          frameBorder={0}
+          width={320}
+          height={490}
         />
-        
+
         <div><b>Name : </b>{pet.name}</div>
         <div><b>Id : </b>{pet.id}</div>
         <div><b>Type : </b>{pet.type}</div>
@@ -51,7 +51,7 @@ const PetPage = ({ pet }) => {
         <div><b>Description : </b>{pet.description}</div>
 
         {!pet.isAdopted && (
-          <Link href="/pets/adopt">
+          <Link href={`/pets/adopt/${pet.id}`}>
             <div className={styles.buttons}>
               <button className={styles.adopt}>
                 <a>Adopt</a>
